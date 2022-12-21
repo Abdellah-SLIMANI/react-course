@@ -1,3 +1,4 @@
+# Variables
 A variable is a literal assigned to an identifier, so you can reference and use it later in the program.
 
 Variables in JavaScript do not have any type attached. Once you assign a specific literal type to a variable, you can later reassign the variable to host any other type, without type errors or any issue.
@@ -6,7 +7,7 @@ This is why JavaScript is sometimes referred to as “untyped”.
 
 A variable must be declared before you can use it. There are 3 ways to do this, using var, let or const, and those 3 ways differ in how you can interact with the variable later on.
 
-##Using var
+## Using var
 Until ES2015, var was the only construct available for defining variables.
 
 var a = 0
