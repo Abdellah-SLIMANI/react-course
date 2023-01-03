@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <section id="baked-salmon">
+        <h1>Baked Salmon</h1>
+        <ul class="ingredients">
+            <li>2 lb salmon</li>
+            <li>5 sprigs fresh rosemary</li>
+            <li>2 tablespoons olive oil</li>
+            <li>2 small lemons</li>
+            <li>1 teaspoon kosher salt</li>
+            <li>4 cloves of chopped garlic</li>
+        </ul>
+        <section class="instructions">
+            <h2>Cooking Instructions</h2>
+            <p>Preheat the oven to 375 degrees.</p>
+            <p>Lightly coat aluminum foil with oil.</p>
+            <p>Place salmon on foil</p>
+            <p>Cover with rosemary, sliced lemons, chopped garlic.</p>
+            <p>Bake for 15-20 minutes until cooked through.</p>
+            <p>Remove from oven.</p>
+        </section>
+    </section>
+
+        <!-- ------------------------------------------------------------------------------------------- -->
+
+        <script>
+            React.createElement(
+                    "section",
+                    { id: "baked-salmon" },
+                    React.createElement("h1", null, "Baked Salmon"),
+                    React.createElement(
+                    "ul",
+                    { className: "ingredients" },
+                    React.createElement("li", null, "2 lb salmon"),
+                    React.createElement("li", null, "5 sprigs fresh rosemary"),
+                    React.createElement("li", null, "2 tablespoons olive oil"),
+                    React.createElement("li", null, "2 small lemons"),
+                    React.createElement("li", null, "1 teaspoon kosher salt"),
+                    React.createElement("li", null, "4 cloves of chopped garlic")
+                    ),
+                    React.createElement(
+                    "section",
+                    { className: "instructions" },
+                    React.createElement("h2", null, "Cooking Instructions"),
+                    React.createElement("p", null, "Preheat the oven to 375 degrees."),
+                    React.createElement("p", null, "Lightly coat aluminum foil withoil."),
+                    React.createElement("p", null, "Place salmon on foil."),
+                    React.createElement("p",null,"Cover with rosemary, sliced lemons, chopped garlic."),
+                    React.createElement("p",null,"Bake for 15-20 minutes until cooked through."),
+                    React.createElement("p", null, "Remove from oven.")));
+                    // *******************************************************************************************************************
+                    const data = [
+                            {
+                            name: "Baked Salmon",
+                            ingredients: [
+                            { name: "Salmon", amount: 1, measurement: "l lb" },
+                            { name: "Pine Nuts", amount: 1, measurement: "cup" },
+                            { name: "Butter Lettuce", amount: 2, measurement: "cups" },
+                            { name: "Yellow Squash", amount: 1, measurement: "med" },
+                            { name: "Olive Oil", amount: 0.5, measurement: "cup" },
+                            { name: "Garlic", amount: 3, measurement: "cloves" }
+                            ],
+                            steps: [
+                            "Preheat the oven to 350 degrees.",
+                            "Spread the olive oil around a glass baking dish.",
+                            "Add the yellow squash and place in the oven for 30 mins.",
+                            "Add the salmon, garlic, and pine nuts to the dish.",
+                            "Bake for 15 minutes.",
+                            "Remove from oven. Add the lettuce and serve."
+                            ]
+                            },
+                            {
+                            name: "Fish Tacos",
+                            ingredients: [
+                            { name: "Whitefish", amount: 1, measurement: "l lb" },
+                            { name: "Cheese", amount: 1, measurement: "cup" },
+                            { name: "Iceberg Lettuce", amount: 2, measurement: "cups" },
+                            { name: "Tomatoes", amount: 2, measurement: "large" },
+                            { name: "Tortillas", amount: 3, measurement: "med" }
+                            ],
+                            steps: [
+                            "Cook the fish on the grill until cooked through.",
+                            "Place the fish on the 3 tortillas.",
+                            "Top them with lettuce, tomatoes, and cheese."
+                            ]
+                            }
+                            ];
+                            // ***********************************
+                            const IngredientsList = React.createClass({
+                                displayName: "IngredientsList",
+                                render() {
+                                    return React.createElement(
+                                        "ul",
+                                        { className: "ingredients" },
+                                        this.props.items.map((ingredient, i) =>
+                                            React.createElement("li", { key: i }, ingredient)
+                                        )
+                                    );
+                                }
+                            });
+
+                                //***************************************************
+        </script>
+</body>
+</html>
